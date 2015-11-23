@@ -8,6 +8,8 @@
 
 
 <!-- Latest compiled and minified CSS -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -23,17 +25,18 @@
 </head>
 
 <style type="text/css">
+
 @import url(https://fonts.googleapis.com/css?family=Caveat);
 	
 #logo-placeholder
 {
 float: left;
-height: 80px;
-	width: 15%;
+height: 50px;
+	width: 12%;
+    margin-right: 3%;
 	position:relative;
 	margin-left: 1%;
 	margin-right: 1%;
-	background-color: #F1C2C2;
 }
 .title-text
 {
@@ -49,6 +52,7 @@ text-align: center;
     position: relative;
     width: 100%;
     float: left;
+    height: 50px;
     border-width: 2px;
     border-style: solid;
 
@@ -57,45 +61,67 @@ text-align: center;
 {
     float:left;
     position: relative;
-    width: 70%;
-    padding: 2%;
-    height: 80px;
+    width: 68%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 50px;
     border-width: 2px;
     border-style: solid;
 }
 
 .panel-holder
 {
-    padding-top: 2%;
+    
     margin-left: 6%;
     margin-right: 6%;
-    margin-top: 8%;
+    margin-top: 3%;
+    margin-bottom: 0;
     text-align: center;
+}
+.panel-title
+{
+    margin-top:2%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15pt;
+    font-weight: 400;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    color: #34495E;
+    margin-left: 40%;
 }
 #panel-div
 {
-   height:60%;
-    width: 24%;
+    margin-top: 1%;
+    height:350px;
+    max-height: 350px;
+    overflow:hidden;
+    width: 30%;
     float: left;
-    padding-top: 12%;
-    padding-right: 2%;
-    padding-left: 2%;
-    margin-right: 1%;
+    padding:1%;
     overflow-y:scroll;
-    border-style: solid;
-    border-width: 2px;
 }
 
-
+#panels
+{
+    background-color: white;
+    width: 3in;
+    height: 3in;
+    overflow: hidden;
+    margin-bottom: 1pt;
+}
 
 /* Some CSS styling */
 #sketchpadapp {
-    float: left;
-    height: 60%;
+    margin-top: 2%;
+    float: right;
+    margin-right: 2%;
+    height: 55%;
     position: relative;
-    width: 75%;
-    border-style: solid;
-    border-width:2px;
+    width: 65%;
+    margin-bottom: 0;
     /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -114,19 +140,53 @@ text-align: center;
 }
 #sketchpad {
     float:left;
-    border:2px solid #888;
-    border-radius:4px;
     height: 100%;
-    width: 80%;
+    width: 95%;
+    border-radius: 4px;
+    margin-left: 3%;
+    background-color: #fff;
     position:relative; /* Necessary for correct mouse co-ords in Firefox */
 }
 
-
-
+#hide
+{
+    margin-left:20%;
+    width: 10%;
+    max-width: 12%;
+    float: left;
+    text-align: center;
+    height: 25px;
+}
+#done
+{
+    margin-left: 80%;
+    height: 30px;
+    padding:0;
+    margin-top: 0;
+    position: relative;
+    width: 8%;
+    max-width: 8%;
+    
+}
 body
 {
+    background-color: #EEE;
     margin-left: 1%;
     margin-right: 1%;
+}
+
+button
+{
+    border-style: solid;
+    border-color: #68A0A0;
+    color: #68A0A0;
+    text-align: center;
+}
+
+button:hover
+{
+    color: #fff;
+    background-color: #68A0A0;
 }
 </style>
 
@@ -138,37 +198,66 @@ body
 
 <div class="page-title">
     
-     <h2 class="title-text"> You are Ideating </h2>
+    <div class="title-text"> You are Ideating
+    </div>
     
     <div class="header-holder">
- 	  <img id="logo-placeholder" src="content/circle.png">
-	
+ 	
+       <img id="logo-placeholder" src="content/circle.png">
+	   
        <div class="create-bar">
-        </div>
+       </div>
  
     </div>
 
 </div>
 
-<div class="panel-holder">
 
-<div id="panel-div"></div>
+
+
+
+
+
+<div class="panel-holder">
+    
+    <h3 class="panel-title"> PANEL 1</h3>
+    
+    <div id="panel-div">
+
+        <img src="" id = "panels">
+        <img src="" id = "panels">
+        <img src="" id = "panels">
+        <img src="" id = "panels">
+        <img src="" id = "panels">
+        <img src="" id = "panels">
+        <img src="" id = "panels">
+        <img src="" id = "panels">
+    </div>
+
     
 
-  <div onload= init() id="sketchpadapp">
-        
-        <div class="rightside">
-
-             
-            <canvas id="sketchpad">
-            </canvas>
-
-
-            <input type="submit" value="Clear Sketchpad" onclick="clearCanvas(canvas,ctx);">
+    <div onload=init() id="sketchpadapp">
+       <div class="rightside">             
+            <canvas id="sketchpad"></canvas>
         </div>
     </div>
 
+
+
+<button id="hide">HIDE / SHOW </button>
+
 </div>
+
+
+<button id="done"> DONE </button>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#panel-div").toggle();
+    });
+});</script>
 
 
 
