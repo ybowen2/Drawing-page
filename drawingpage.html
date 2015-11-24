@@ -32,7 +32,7 @@
 {
 float: left;
 height: 50px;
-	width: 12%;
+	width: 8%;
     margin-right: 3%;
 	position:relative;
 	margin-left: 1%;
@@ -47,14 +47,21 @@ color: #91688F;
 text-align: center;
 }
 
+.body-text
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15pt;
+    font-weight: 400;
+    color: #34495E;
+    text-align: center;
+}
 .header-holder
 {
     position: relative;
     width: 100%;
     float: left;
     height: 50px;
-    border-width: 2px;
-    border-style: solid;
+
 
 }
 .create-bar
@@ -65,10 +72,29 @@ text-align: center;
     margin-left: 2%;
     margin-right: 2%;
     height: 50px;
-    border-width: 2px;
-    border-style: solid;
+  
+}
+.bookmark-text
+{
+   margin-left: 2%;
+    vertical-align: top;
+    padding-bottom: 15px;
+    color: #DCC6E0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    float: left; 
+    font-size: 15pt;
+    position: relative;
 }
 
+.bookmark-image
+{
+    height: 30px;
+    width: 30px;
+    float: left;
+    position: relative;
+    margin-left: 50%;
+}
 .panel-holder
 {
     
@@ -92,10 +118,11 @@ text-align: center;
     color: #34495E;
     margin-left: 40%;
 }
+
 #panel-div
 {
     margin-top: 1%;
-    height:350px;
+    height:330px;
     max-height: 350px;
     overflow:hidden;
     width: 30%;
@@ -118,7 +145,7 @@ text-align: center;
     margin-top: 2%;
     float: right;
     margin-right: 2%;
-    height: 55%;
+    height: 54%;
     position: relative;
     width: 65%;
     margin-bottom: 0;
@@ -150,7 +177,14 @@ text-align: center;
 
 #hide
 {
-    margin-top: 2%;
+    margin-top: 20%;
+    width: 100%;
+    height: 80%;
+    text-align: center;   
+}
+.hide-button
+{
+   
     margin-left:20%;
     width: 10%;
     max-width: 12%;
@@ -160,14 +194,44 @@ text-align: center;
 }
 #done
 {
-    float: right;
-    margin-top: 0;
-    margin-right: 10%;
-    height: 30px;
+  
+    margin-top: 2%;
+    margin-left: 78%;
+    height: 24px;
     position: relative;
     width: 8%;
     max-width: 8%;
     
+}
+.modal-content
+{
+    background-color: #EEE;
+    
+}
+.modal-title
+{
+    background-color: #EEE;
+}
+.modal-gallery
+{
+    background-color: #EEE;
+    margin-top: 1%;
+    height:60%;
+    width: 90%;
+    overflow:hidden;
+    text-align: center;
+    margin-left: 5%;
+  
+}
+#modal-panels
+{
+    background-color: white;
+    opacity: 0.8;
+    width: 25%;
+    height: 49%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 1pt;
 }
 body
 {
@@ -207,6 +271,8 @@ button:hover
        <img id="logo-placeholder" src="content/circle.png">
 	   
        <div class="create-bar">
+       <img src="content/create.jpg" class="bookmark-image">
+       <h3 class = "bookmark-text">CREATE!</h3>
        </div>
  
     </div>
@@ -244,12 +310,52 @@ button:hover
     </div>
 
 
-
+<div class="hide-button">
 <button id="hide">HIDE / SHOW </button>
+</div>
 
-<button id="done"> DONE </button>
 
 </div>
+<button id="done" data-toggle="modal" data-target="#done-modal"> DONE </button>
+
+<div id="done-modal" class="modal fade img-responsive" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="title-text">YOU'RE DONE!</h2>
+        <h3 class="body-text"> HERE ARE YOUR IDEAS</h3>
+        <div class="modal-gallery">
+        <div class="col-xs-12">
+        <img src="" id = "modal-panels">
+        <img src="" id = "modal-panels">
+        <img src="" id = "modal-panels">
+        <img src="" id = "modal-panels">
+            
+        </div>
+        <div class="col-xs-12">
+        <img src="" id = "modal-panels">
+        <img src="" id = "modal-panels">
+        <img src="" id = "modal-panels">
+        <img src="" id = "modal-panels">
+            
+        </div>
+
+            
+        </div>
+
+      </div>
+     
+    </div>
+
+  </div>
+</div>
+
+
+
+
 
 
 
