@@ -1,0 +1,228 @@
+
+@import url(https://fonts.googleapis.com/css?family=Caveat);
+	
+#logo-placeholder
+{
+float: left;
+height: 50px;
+	width: 8%;
+    margin-right: 3%;
+	position:relative;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+.title-text
+{
+font-family: 'Caveat', cursive;
+font-size: 5em;
+position: relative;
+color: #91688F;
+margin-left: 25%;
+}
+
+.body-text
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #34495E;
+    text-align: center;
+}
+.header-holder
+{
+    position: relative;
+    width: 100%;
+    height: 10%;
+
+
+}
+.create-bar
+{
+    float:left;
+    position: relative;
+    width: 68%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 50px;
+  
+}
+.bookmark-text
+{
+   margin-left: 2%;
+    vertical-align: top;
+    padding-bottom: 15px;
+    color: #DCC6E0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    float: left; 
+    font-size: 15px;
+    position: relative;
+}
+
+.bookmark-image
+{
+    height: 30px;
+    width: 30px;
+    float: left;
+    position: relative;
+    margin-left: 50%;
+}
+.panel-holder
+{
+    width:75%;
+    margin-left: 1%;
+    position: relative;
+    text-align: center;
+}
+.panel-title
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    vertical-align: bottom;
+    color: #34495E;
+    margin-left: 50%;
+}
+
+#panel-div
+{
+    height: 350px;
+    max-height: 350px;
+    overflow:hidden;
+    width: 25%;
+    margin-left: 1%;
+    float: left;
+    overflow-y:scroll;
+}
+
+#panels
+{
+    background-color: white;
+    width: 80%;
+    position: relative;
+    height: 30%;
+    overflow: hidden;
+    margin-bottom: 1pt;
+}
+
+/* Some CSS styling */
+#sketchpadapp {
+    margin-top: 2%;
+    float: right;
+    margin-right: 2%;
+    height: 54%;
+    position: relative;
+    width: 62%;
+    margin-bottom: 0;
+    margin-left: 0;
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rightside {
+    float:left;
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+    margin-left:10px;
+}
+#sketchpad {
+    float:left;
+    height: 100%;
+    width: 70%;
+    border-radius: 4px;
+    margin-left: 1%;
+    background-color: #fff;
+    position:relative; /* Necessary for correct mouse co-ords in Firefox */
+}
+
+#hide
+{
+    margin-top: 25%;
+    width: 100%;
+    position: relative;
+    height: 80%;
+    text-align: center;   
+}
+.hide-button
+{
+ 
+    margin-left:15%;
+    width: 10%;
+    max-width: 12%;
+    margin-right: 80%;
+    text-align: center;
+    height: 30px;
+}
+#done
+{
+  
+    margin-top: 2%;
+    margin-left: 69%;
+    height: 24px;
+    position: relative;
+    width: 8%;
+    max-width: 8%;
+    
+}
+.modal-content
+{
+    background-color: #EEE;
+    
+}
+.modal-title
+{
+    background-color: #EEE;
+}
+.modal-gallery
+{
+    background-color: #EEE;
+    margin-top: 1%;
+    height:60%;
+    width: 90%;
+    overflow:hidden;
+    text-align: center;
+    margin-left: 5%;
+  
+}
+#modal-panels
+{
+    background-color: white;
+    opacity: 0.8;
+    width: 25%;
+    height: 40%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 1pt;
+}
+
+body
+{
+    background-color: #EEE;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+button
+{
+    border-style: solid;
+    border-color: #68A0A0;
+    color: #68A0A0;
+    text-align: center;
+}
+
+button:hover
+{
+    color: #fff;
+    background-color: #68A0A0;
+}

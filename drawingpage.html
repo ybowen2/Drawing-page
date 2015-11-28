@@ -3,7 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- BOOTSTRAP CDN LINKS -->
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
@@ -20,240 +19,11 @@
 
 <!-- JQUERY PLUGING-->
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-
-
+<link rel="stylesheet" type="text/css" href="./css/drawing-page.css">
+<link rel="stylesheet" type="text/css" href ="./css/chatroom.css">
 </head>
 
-<style type="text/css">
 
-@import url(https://fonts.googleapis.com/css?family=Caveat);
-	
-#logo-placeholder
-{
-float: left;
-height: 50px;
-	width: 8%;
-    margin-right: 3%;
-	position:relative;
-	margin-left: 1%;
-	margin-right: 1%;
-}
-.title-text
-{
-font-family: 'Caveat', cursive;
-font-size: 56pt;
-position: relative;
-color: #91688F;
-text-align: center;
-}
-
-.body-text
-{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15pt;
-    font-weight: 400;
-    color: #34495E;
-    text-align: center;
-}
-.header-holder
-{
-    position: relative;
-    width: 100%;
-    float: left;
-    height: 50px;
-
-
-}
-.create-bar
-{
-    float:left;
-    position: relative;
-    width: 68%;
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 50px;
-  
-}
-.bookmark-text
-{
-   margin-left: 2%;
-    vertical-align: top;
-    padding-bottom: 15px;
-    color: #DCC6E0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    float: left; 
-    font-size: 15pt;
-    position: relative;
-}
-
-.bookmark-image
-{
-    height: 30px;
-    width: 30px;
-    float: left;
-    position: relative;
-    margin-left: 50%;
-}
-.panel-holder
-{
-    
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-top: 3%;
-    margin-bottom: 0;
-    text-align: center;
-}
-.panel-title
-{
-    margin-top:2%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15pt;
-    font-weight: 400;
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 20px;
-    text-align: left;
-    color: #34495E;
-    margin-left: 40%;
-}
-
-#panel-div
-{
-    margin-top: 1%;
-    height:330px;
-    max-height: 350px;
-    overflow:hidden;
-    width: 30%;
-    float: left;
-    padding:1%;
-    overflow-y:scroll;
-}
-
-#panels
-{
-    background-color: white;
-    width: 3in;
-    height: 3in;
-    overflow: hidden;
-    margin-bottom: 1pt;
-}
-
-/* Some CSS styling */
-#sketchpadapp {
-    margin-top: 2%;
-    float: right;
-    margin-right: 2%;
-    height: 54%;
-    position: relative;
-    width: 65%;
-    margin-bottom: 0;
-    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.rightside {
-    float:left;
-    width: 100%;
-    height: 100%;
-    padding-left: 5%;
-    margin-left:10px;
-}
-#sketchpad {
-    float:left;
-    height: 100%;
-    width: 85%;
-    border-radius: 4px;
-    margin-left: 3%;
-    background-color: #fff;
-    position:relative; /* Necessary for correct mouse co-ords in Firefox */
-}
-
-#hide
-{
-    margin-top: 20%;
-    width: 100%;
-    height: 80%;
-    text-align: center;   
-}
-.hide-button
-{
-   
-    margin-left:20%;
-    width: 10%;
-    max-width: 12%;
-    margin-right: 80%;
-    text-align: center;
-    height: 30px;
-}
-#done
-{
-  
-    margin-top: 2%;
-    margin-left: 78%;
-    height: 24px;
-    position: relative;
-    width: 8%;
-    max-width: 8%;
-    
-}
-.modal-content
-{
-    background-color: #EEE;
-    
-}
-.modal-title
-{
-    background-color: #EEE;
-}
-.modal-gallery
-{
-    background-color: #EEE;
-    margin-top: 1%;
-    height:60%;
-    width: 90%;
-    overflow:hidden;
-    text-align: center;
-    margin-left: 5%;
-  
-}
-#modal-panels
-{
-    background-color: white;
-    opacity: 0.8;
-    width: 25%;
-    height: 49%;
-    float: left;
-    overflow: hidden;
-    margin-bottom: 1pt;
-}
-body
-{
-    background-color: #EEE;
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
-button
-{
-    border-style: solid;
-    border-color: #68A0A0;
-    color: #68A0A0;
-    text-align: center;
-}
-
-button:hover
-{
-    color: #fff;
-    background-color: #68A0A0;
-}
-</style>
 
 
 
@@ -263,16 +33,16 @@ button:hover
 
 <div class="page-title">
     
-    <div class="title-text"> You are Ideating
-    </div>
+    
     
     <div class="header-holder">
  	
-       <img id="logo-placeholder" src="content/circle.png">
-	   
+
+       <img id="logo-placeholder" src="content/circle2.png">
+	   <h1 class="title-text"> You are ideating </h1>
        <div class="create-bar">
-       <img src="content/create.jpg" class="bookmark-image">
-       <h3 class = "bookmark-text">CREATE!</h3>
+       <img src="content/create9.jpg" class="bookmark-image">
+       <h3 class = "bookmark-text">create!</h3>
        </div>
  
     </div>
@@ -287,7 +57,7 @@ button:hover
 
 <div class="panel-holder">
     
-    <h3 class="panel-title"> PANEL 1</h3>
+    <h3 class="panel-title"> panel 1</h3>
     
     <div id="panel-div">
 
@@ -311,12 +81,53 @@ button:hover
 
 
 <div class="hide-button">
-<button id="hide">HIDE / SHOW </button>
+<button id="hide"> Hide/Show </button>
+</div>
 </div>
 
+<div class="Chat_Room">
+          <div class="Chat_Icon" style="font-size:24px;">
+            <ul id="drop-nav">
+              <li><a href="#"><i class="fa fa-users"></i></a>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-circle" style="font-size:12px; color: green; text-align:left;"></i> Tommy <i class="fa fa-star"></i></i></a></li>
+                    <li><a href="#"><i class="fa fa-circle" style="font-size:12px; color: green; text-align:left;"></i> Carlton</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o" style="font-size:12px; text-align:left;"></i> Tanysha</a></li>
+                   
+                  </ul>
+              </li>
+              <p>Chat</p>
+            </div>
+          <div class="Message_Window">
+            <p><b>Tommy:</b>
+              <br />
+              Wow, you can do so much with potatoes!
+            </p>
 
-</div>
-<button id="done" data-toggle="modal" data-target="#done-modal"> DONE </button>
+            <p><b>Tanysha:</b>
+              <br/>
+              Could you explain more about the Hasselholf?
+            </p>
+
+            <p><b>Sue:</b>
+              <br/>
+              HAHAHAHAH THESE ARE SO GREAT
+            </p>
+
+
+
+          </div>
+
+          <textarea class="Type_Here" placeholder="Type a message..."></textarea>
+
+          <div class="Send_Button"><b>Send</b></div>
+ </div>
+
+
+
+
+
+<button id="done" data-toggle="modal" data-target="#done-modal"> Done</button>
 
 <div id="done-modal" class="modal fade img-responsive" role="dialog">
   <div class="modal-dialog">
@@ -362,9 +173,18 @@ button:hover
 <script type="text/javascript">
 $(document).ready(function(){
     $("#hide").click(function(){
-        $("#panel-div").toggle();
+        $("#panel-div").toggle()
+    
+
+
     });
-});</script>
+
+
+});
+
+
+
+</script>
 
 
 
