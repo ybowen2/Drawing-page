@@ -39,10 +39,13 @@ margin-left: 28%;
 }
 .create-bar
 {
-    float:left;
+   
     position: relative;
-    width: 68%;
-    margin-left: 2%;
+    width: 100%;
+    float: left;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 25%;
     margin-right: 2%;
     height: 50px;
   
@@ -92,19 +95,26 @@ margin-left: 28%;
 {
     background-color: #fff;
     width: 45%;
+    z-index: 200;
     border-radius: 10px;
     margin:2%;
     position: relative;
     height: 88px;
     margin-bottom: 1pt;
 }
-
+#panels:hover
+{
+    opacity: 0.8;
+    background-color: #E6E6E6;
+    padding: 1%;
+    
+}
 /* Some CSS styling */
 #sketchpadapp {
     margin-right: 27%;
     float: right;
     margin-right: 2%;
-    height: 55%;
+    height: 50%;
     position: relative;
     width: 68%;
     margin-bottom: 0;
@@ -190,7 +200,7 @@ ul p:hover
     src="content/eraser-hover.png";
 }
 #simple_sketch{
-    border-radius:4px;
+    border-radius:5px;
     width: 100%;
     overflow: hidden;
     height: 100%;
@@ -284,7 +294,7 @@ button:hover
     width: 100%;
     float: left;
     background-color: #eee;
-    height: 500px;
+    height: 440px;
     color: #68A0A0;
     -webkit-box-sizing:border-box; 
     -moz-box-sizing:border-box; 
@@ -293,7 +303,7 @@ button:hover
  
 .accordion {
     margin-left: 2%;
-  ` max-height: 500px;
+  ` max-height: 440px;
     overflow-x:hidden;
     overflow-y:hidden;
     width: 25%;
@@ -347,7 +357,8 @@ button:hover
    margin-top:5%;
    padding-top: 2%;
    border-radius: 5px;
-   max-height: 400px;
+   max-height: 440px;
+   height: 440px;
    background-color: #DCC6E0;
     display:inline-block;
 }
