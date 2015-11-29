@@ -70,8 +70,7 @@
 <!-- HOLDER FOR PANELS DIV -->
 <div class="panel-holder">
     
-    <!--TITLE for panel number display in center of drawing canvas-->
-    <h3 class="panel-title"> panel 1</h3>
+    
     
     <!--Beginning of accordion of holding old idea tiles-->
     <div class="accordion">
@@ -97,7 +96,8 @@
     
     </div><!--end .accordion-->    
 
-    
+    <!--TITLE for panel number display in center of drawing canvas-->
+    <h3 class="panel-title"> panel 1</h3>
 
 
     <!-- SKETCHPAD OUTER SHELL DIV BEGINNING -->
@@ -107,9 +107,10 @@
     <div class="tools">
 
     <!--UNDO TOOL + JAVASCRIPT + IMAGES -->
-    <a id="canvas_tool_undo"href="#simple_sketch" data-tool="undo">
+   <a id="canvas_tool_undo"href="#simple_sketch" data-tool="undo">
         <img src="content/undo.png" id="undo" height="25px" width="25px">
-            
+
+            <!--HOVER IMAGE JAVASCRIPT -->
             <script type="text/javascript">
             $('#canvas_tool_undo').on('mouseover', function() {
             $(this).find('img').attr('src','content/undo-hover.png');
@@ -124,8 +125,27 @@
     <!--ERASER TOOL + JAVASCRIPT + IMAGES -->
     <a id="canvas_tool_eraser"href="#simple_sketch" data-tool="eraser">
         <img src="content/eraser.png" id="eraser" height="25px" width="25px">
+            
+             <!--DROPDOWN MENU +JAVASCRIPT-->
+            <ul class="sub-eraser">
+            <p class="button">Small</p>
+            <p class="button">Medium</p>
+            </ul>
 
+            <script type="text/javascript">
+            $(document).ready(function() {
+            $('#canvas_tool_eraser' ).hover(
+            
+            function(){
+                $('.sub-eraser').show();
+            },
+            function(){
+                $('.sub-eraser').hide();
+                });
+            });
+            </script>
 
+            <!-- HOVER IMAGE JAVASCRIPT --> 
             <script type="text/javascript">
             $('#canvas_tool_eraser').on('mouseover', function() {
             $(this).find('img').attr('src','content/eraser-hover.png');});
@@ -137,18 +157,73 @@
             $(this).find('img').attr('src','content/eraser-hover.png');
             });
             </script>
+    </a></li>
+
+
+    <!-- TEXT TOOL + JAVASCRIPT + IMAGES -->
+    <a id="canvas_tool_text"href="#simple_sketch" data-tool="text">
+        <img id="text"src="content/text.png" width="25px" height="25px">
+            <!--DROPDOWN MENU +JAVASCRIPT-->
+            <ul class="sub-text">
+            <p class="button">Thin</p>
+            <p class="button">Medium</p>
+            </ul>
+
+            <script type="text/javascript">
+            $(document).ready(function() {
+            $('#canvas_tool_text' ).hover(
+            
+            function(){
+                $('.sub-text').show();
+            },
+            function(){
+                $('.sub-text').hide();
+                });
+            });
+            </script>
+
+        <!-- HOVER IMAGE JAVASCRIPT --> 
+        <script type="text/javascript">
+        $('#canvas_tool_text').on('mouseover', function() {
+        $(this).find('img').attr('src','content/text-hover.png');
+        });
+        $('#canvas_tool_text').on('mouseout', function() {
+        $(this).find('img').attr('src','content/text.png');
+        });
+        </script>
     </a>
 
 
-    <!--BRUSH TOOL + JAVASCRIPT + IMAGES -->
-    <a id="canvas_tool_marker"href="#simple_sketch" data-tool="marker">
-        <img id="brush"src="content/brush.png" width="25px" height="25px">
 
+    <!--BRUSH TOOL + JAVASCRIPT + IMAGES -->
+    <a id="canvas_tool_brush"href="#simple_sketch" data-tool="marker">
+        <img id="brush"src="content/brush.png" width="25px" height="25px">
+            
+             <!--DROPDOWN MENU +JAVASCRIPT-->
+            <ul class="sub-brush">
+            <p class="button">Thin</p>
+            <p class="button">Medium</p>
+            </ul>
+
+            <script type="text/javascript">
+            $(document).ready(function() {
+            $('#canvas_tool_brush' ).hover(
+            
+            function(){
+                $('.sub-brush').show();
+            },
+            function(){
+                $('.sub-brush').hide();
+                });
+            });
+            </script>
+
+        <!-- HOVER IMAGE JAVASCRIPT -->  
         <script type="text/javascript">
-        $('#canvas_tool_marker').on('mouseover', function() {
+        $('#canvas_tool_brush').on('mouseover', function() {
         $(this).find('img').attr('src','content/brush-hover.png');
         });
-        $('#canvas_tool_marker').on('mouseout', function() {
+        $('#canvas_tool_brush').on('mouseout', function() {
         $(this).find('img').attr('src','content/brush.png');
         });
         </script>
@@ -180,7 +255,9 @@
                    
                   </ul>
               </li>
+
               <p>Chat</p>
+              </ul>
             </div>
           <div class="Message_Window">
             <p><b>Tommy:</b>
@@ -199,12 +276,14 @@
             </p>
         <!-- End of message window div-->
         </div>
+        
 
         <!--textarea of chat beginning-->
         <textarea class="Type_Here" placeholder="Type a message..."></textarea>
         <div class="Send_Button"><b>Send</b></div>
     <!--CHATROOM DIV ENDING -->
     </div>
+
 
 
 
