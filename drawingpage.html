@@ -2,16 +2,20 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- BOOTSTRAP CDN LINKS -->
+<!--JQUERY SCRIPT-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!--SKETCH SCRIPT FOR CANVAS PANEL-->
 <script type="text/javascript" src="./js/sketch.js"></script>
-<script type="text/javascript" src="html5-canvas-drawing-app.js"></script>
-<!-- Latest compiled and minified CSS -->
+
+<!-- FONT CDN FOR OPEN SANS -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
+
+<!--CDN FOR BOOTSTRAP-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-<!-- Optional theme -->
+<!-- Optional theme BOOSTRAP-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
@@ -19,7 +23,12 @@
 
 <!-- JQUERY PLUGING-->
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+
+<!--CSS FOR DRAWING PAGE-->
 <link rel="stylesheet" type="text/css" href="./css/drawing-page.css">
+
+<!-- CHATROM CSS-->
 <link rel="stylesheet" type="text/css" href ="./css/chatroom.css">
 </head>
 
@@ -27,26 +36,30 @@
 
 
 
-
+<!-- Beginning of BODY Area -- >
 <body>
 	
 
+<!--Page title div-->
 <div class="page-title">
     
-    
-    
+    <!--HOLDER for Header -> title, logo and timer -->
     <div class="header-holder">
  	
+        <!--PLACEHOLDER for LOGO top left corner space -->
+        <img id="logo-placeholder" src="content/circle2.png">
 
-       <img id="logo-placeholder" src="content/circle2.png">
-	   <h1 class="title-text"> You are ideating </h1>
-       <div class="create-bar">
-       <img src="content/create9.jpg" class="bookmark-image">
-       <h3 class = "bookmark-text">create!</h3>
-       </div>
- 
+        <!--Header for create page -->
+        <h1 class="title-text"> You are ideating </h1>
+
+        <!--Create bar holding bookmarks -->  
+        <div class="create-bar">
+            <img src="content/create9.jpg" class="bookmark-image">
+            <h3 class = "bookmark-text">create!</h3>
+        </div>
+    <!--END OF HEADER HOLDER --> 
     </div>
-
+<!-- ENF OF PAGE TITLE DIV-->
 </div>
 
 
@@ -54,54 +67,109 @@
 
 
 
-
+<!-- HOLDER FOR PANELS DIV -->
 <div class="panel-holder">
     
+    <!--TITLE for panel number display in center of drawing canvas-->
     <h3 class="panel-title"> panel 1</h3>
     
-
+    <!--Beginning of accordion of holding old idea tiles-->
     <div class="accordion">
-    <div class="accordion-section">
-        <a class="accordion-section-title" href="#accordion-1">idea board</a>
+
+        <div class="accordion-section">
+
+            <!--Title of old idea panels board -->
+            <a class="accordion-section-title" href="#accordion-1">idea board</a>
          
-        <div id="accordion-1" class="accordion-section-content">
+            <div id="accordion-1" class="accordion-section-content">
 
-        <img src="content/circle.png" id = "panels">
-        <img src="content/circle.png" id = "panels">
-        <img src="content/circle.png" id = "panels">
-        <img src="content/circle.png" id = "panels">
-        <img src="content/circle.png" id = "panels">
-        <img src="content/circle.png" id = "panels">
-        <img src="content/circle.png" id = "panels">
-        <img src="" id = "panels">
+                <img src="content/circle.png" id = "panels">
+                <img src="content/circle.png" id = "panels">
+                <img src="content/circle.png" id = "panels">
+                <img src="content/circle.png" id = "panels">
+                <img src="content/circle.png" id = "panels">
+                <img src="content/circle.png" id = "panels">
+                <img src="content/circle.png" id = "panels">
+                <img src="" id = "panels">
+            </div><!--end .accordion-section-content-->
+        
+        </div><!--end .accordion-section-->
+    
+    </div><!--end .accordion-->    
 
-        </div><!--end .accordion-section-content-->
-    </div><!--end .accordion-section-->
-</div><!--end .accordion-->    
+    
 
+
+    <!-- SKETCHPAD OUTER SHELL DIV BEGINNING -->
     <div onload=init() id="sketchpadapp">
+  
+    <!--Beginning TOOLS section for toolbar above canvas-->  
     <div class="tools">
 
+    <!--UNDO TOOL + JAVASCRIPT + IMAGES -->
     <a id="canvas_tool_undo"href="#simple_sketch" data-tool="undo">
         <img src="content/undo.png" id="undo" height="25px" width="25px">
+            
+            <script type="text/javascript">
+            $('#canvas_tool_undo').on('mouseover', function() {
+            $(this).find('img').attr('src','content/undo-hover.png');
+            });
+
+            $('#canvas_tool_undo').on('mouseout', function() {
+            $(this).find('img').attr('src','content/undo.png');
+            });
+            </script>
     </a>
     
+    <!--ERASER TOOL + JAVASCRIPT + IMAGES -->
     <a id="canvas_tool_eraser"href="#simple_sketch" data-tool="eraser">
         <img src="content/eraser.png" id="eraser" height="25px" width="25px">
+
+
+            <script type="text/javascript">
+            $('#canvas_tool_eraser').on('mouseover', function() {
+            $(this).find('img').attr('src','content/eraser-hover.png');});
+
+            $('#canvas_tool_eraser').on('mouseout', function() {
+            $(this).find('img').attr('src','content/eraser.png');
+            });
+            $('#canvas_tool_eraser').on('mousedown', function() {
+            $(this).find('img').attr('src','content/eraser-hover.png');
+            });
+            </script>
     </a>
+
+
+    <!--BRUSH TOOL + JAVASCRIPT + IMAGES -->
     <a id="canvas_tool_marker"href="#simple_sketch" data-tool="marker">
         <img id="brush"src="content/brush.png" width="25px" height="25px">
+
+        <script type="text/javascript">
+        $('#canvas_tool_marker').on('mouseover', function() {
+        $(this).find('img').attr('src','content/brush-hover.png');
+        });
+        $('#canvas_tool_marker').on('mouseout', function() {
+        $(this).find('img').attr('src','content/brush.png');
+        });
+        </script>
     </a>
-</div>
-       <canvas id="simple_sketch" width="800" height="300"></canvas>
-<script type="text/javascript">
-  $(function() {
-    $('#simple_sketch').sketch();
-  });
-</script>
+
+    <!-- end of TOOLS section for toolbar above canvas-->
+    </div>
+    
+
+    <!-- CANVAS SECTION + JAVASCRIPT FOR DRAWING -->
+    <canvas id="simple_sketch" width="800" height="300"></canvas>
+        <script type="text/javascript">
+        $(function() {
+        $('#simple_sketch').sketch();
+        });
+        </script>
     </div>
 
-<div class="Chat_Room">
+
+    <!-- CHATROOM SECTION BEGINNING -->
+    <div class="Chat_Room">
           <div class="Chat_Icon" style="font-size:24px;">
             <ul id="drop-nav">
               <li><a href="#"><i class="fa fa-users"></i></a>
@@ -129,15 +197,14 @@
               <br/>
               HAHAHAHAH THESE ARE SO GREAT
             </p>
+        <!-- End of message window div-->
+        </div>
 
-
-
-          </div>
-
-          <textarea class="Type_Here" placeholder="Type a message..."></textarea>
-
-          <div class="Send_Button"><b>Send</b></div>
- </div>
+        <!--textarea of chat beginning-->
+        <textarea class="Type_Here" placeholder="Type a message..."></textarea>
+        <div class="Send_Button"><b>Send</b></div>
+    <!--CHATROOM DIV ENDING -->
+    </div>
 
 
 
@@ -152,8 +219,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h2 class="title-text">YOU'RE DONE!</h2>
-        <h3 class="body-text"> HERE ARE YOUR IDEAS</h3>
+        <h2 class="title-text" id="modal-header-text">You're Done!</h2>
+        <h3 class="body-text"> Here are Your Ideas</h3>
         <div class="modal-gallery">
         <div class="col-xs-12">
         <img src="" id = "modal-panels">
@@ -179,8 +246,6 @@
 
   </div>
 </div>
-
-
 
 
 

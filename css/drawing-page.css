@@ -177,12 +177,22 @@ margin-left: 25%;
 }
 .modal-content
 {
+    border-color: #34495E;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
     background-color: #EEE;
     
 }
 .modal-title
+
 {
     background-color: #EEE;
+}
+#modal-header-text
+{
+    text-align: center;
+    margin-left: 2%;
 }
 .modal-gallery
 {
@@ -197,10 +207,11 @@ margin-left: 25%;
 }
 #modal-panels
 {
-    background-color: white;
+    background-color: #eee;
     opacity: 0.8;
     width: 25%;
-    height: 40%;
+    padding:4%;
+    height: 35%;
     float: left;
     overflow: hidden;
     margin-bottom: 1pt;
