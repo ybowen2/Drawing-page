@@ -32,6 +32,9 @@
 <link rel="stylesheet" type="text/css" href ="./css/chatroom.css">
 
 <link rel="stylesheet" type="text/css" href="./css/drawing-timer.css">
+<link rel="stylesheet" type="text/css" href="./css/flipclock.css">
+<script src="./js/libs/jquery.js"></script>
+        <script src="./js/flipclock/flipclock.min.js"></script>
 </head>
 
 
@@ -55,6 +58,55 @@
         <h1 class="title-text"> You are ideating </h1>
         
 
+
+        <script type="text/javascript">
+        function startTimer(duration, display) {
+        var start = Date.now(),
+        diff,
+        minutes,
+        seconds;
+        function timer() {
+        // get the number of seconds that have elapsed since 
+        // startTimer() was called
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+
+        // does the same job as parseInt truncates the float
+        minutes = (diff / 60) | 0;
+        seconds = (diff % 60) | 0;
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds; 
+
+        if (diff <= 0) {
+            // add one second so that the count down starts at the full duration
+            // example 05:00 not 04:59
+            start = Date.now() + 6000;
+        }
+        if(seconds==0)
+            clearTimeout(timer);
+    };
+    // we don't want to wait a full second before the timer starts
+    timer();
+    setInterval(timer, 1000);
+
+
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 3,
+    
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+
+
+        </script>
+        <a>
+        <div class="clock"><span id="time">minutes!</span></div>
+        </div></a>
+        
 
         <div class="create-bar">
 
@@ -343,11 +395,15 @@ $(function(){
     $('#ideate-modal').on('show.bs.modal', function(){
         var myModal = $(this);
         clearTimeout(myModal.data('hideInterval'));
+        setTimeout(function(){
+   window.location.reload(1);
+}, 5000);
         myModal.data('hideInterval', setTimeout(function(){
             myModal.modal('hide');
         }, 4000));
     });
 });
+
 </script>
 
 
@@ -366,6 +422,8 @@ $(function(){
     </div>
 
   </div>
+
+  
 
 
 
